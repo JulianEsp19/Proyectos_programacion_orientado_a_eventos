@@ -2,16 +2,21 @@ package practica08;
 
 public class Cotizaciones {
     
+    //Atributos
     Cotizacion inicio;
 
+    //Constructor
     public Cotizaciones() {
         inicio = null;
     }
     
+    //Funcion para saber si la lista anidada esta vacia o tiene valores
     public boolean estaVacio(){
         return inicio == null;
     }
     
+    /* se añade la cotizacion en la lista enlazada y se calcula el subTotal, iva, totalPagar y 
+    las mensualidades*/
     public void anadirCotizacion(String nombre, int cantidadDias, String destinoTuristico, String tipoHabitacion, String tipoPago){
         float subTotal = calcularSubTotal(cantidadDias, destinoTuristico, tipoHabitacion);
         float iva = (float) (subTotal * 0.16);
@@ -26,6 +31,8 @@ public class Cotizaciones {
         }
     }
     
+    /*Funcion para buscar una cotizacion en la lista anidada a partir del nombre, y devuelve todos los 
+    datos de la cotizacion*/
     public String buscarCotizacion(String nombre){
         Cotizacion temp = inicio;
         while (temp != null) {
@@ -43,6 +50,8 @@ public class Cotizaciones {
         return "No encontrado";
     }
     
+    /*Funcion para calcular los pagos mensuales, si es que fuera el caso, ya que puede que solo
+    sea un pago unico*/
     private float calcularMensualidad(float totalPagar, String tipoPago){
         float mensualidad = 0;
         
@@ -54,6 +63,8 @@ public class Cotizaciones {
         return mensualidad;
     }
     
+    /*Funcion para calcular el subTotal a partir de sumar el precio de destino y se multiplica
+    el tipo de habitacion por el numero de dias que se va a hacer en el viaje*/
     private float calcularSubTotal(int cantidadDias, String destinoTuristico, String tipoHabitacion){
         float subTotal = 0;
         

@@ -2,6 +2,7 @@ package practica08;
 
 public class Cotizacion {
     
+    //atributos
     private String nombre;
     private int cantidadDias;
     private String destinoTuristico;
@@ -13,6 +14,7 @@ public class Cotizacion {
     private float mensualidad;
     private Cotizacion siguiente;
 
+    //Constructor
     public Cotizacion(String nombre, int cantidadDias, String destinoTuristico, String tipoHabitacion, String tipoPago, float subTotal, float iva, float totalPagar, float mensualidad, Cotizacion siguiente) {
         this.nombre = nombre;
         this.cantidadDias = cantidadDias;
@@ -26,6 +28,7 @@ public class Cotizacion {
         this.siguiente = siguiente;
     }    
 
+    //Getters y Setters
     public String getNombre() {
         return nombre;
     }

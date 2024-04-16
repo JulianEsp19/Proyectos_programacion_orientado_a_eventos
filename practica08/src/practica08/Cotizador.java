@@ -5,7 +5,9 @@ import javax.swing.JScrollPane;
 
 public class Cotizador extends javax.swing.JFrame {
 
+    //Variable de la lista enlazada de las cotizaciones
     Cotizaciones cotizaciones = new Cotizaciones();
+    //Variable donde se guardaran todos los datos para el jListCotizaciones
     DefaultListModel cotizacionesLista = new DefaultListModel();
     /**
      * Creates new form cotizador
@@ -16,6 +18,8 @@ public class Cotizador extends javax.swing.JFrame {
         jListCotizaciones.setModel(cotizacionesLista);
     }
     
+    /*Funcion para limpiar los campos de la interfaz grafica donde los radioButtons
+    pasan a uno por defecto*/
     public void limpiar(){
         
         textFieldCantidadDias.setText("");

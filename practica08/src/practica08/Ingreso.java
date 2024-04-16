@@ -3,13 +3,12 @@ package practica08;
 public class Ingreso extends javax.swing.JFrame {
     
     Usuarios usuarios = new Usuarios();
-    /**
-     * Creates new form Ingreso
-     */
+    //Constructor
     public Ingreso() {
         initComponents();
         limpiarCampos();
         
+        //Creacion de usuarios para el inicio de sesion
         usuarios.anadirUsuario("Usuario1", "Usuario1");
         usuarios.anadirUsuario("Usuario2", "Usuario2");
         usuarios.anadirUsuario("Usuario3", "Usuario3");
@@ -17,6 +16,7 @@ public class Ingreso extends javax.swing.JFrame {
         usuarios.anadirUsuario("Usuario5", "Usuario5");
     }
     
+    //Funcion para limpiar todos los campos dentro de la interfaz grafica
     public void limpiarCampos(){
         textFieldUsuario.setText("");
         passFieldContrasena.setText("");
@@ -24,10 +24,12 @@ public class Ingreso extends javax.swing.JFrame {
         labelMensaje.setText("");
     }
     
+    //Funcion para obtener verdadero si es que los campos de la interfaz grafica estan vacios
     public boolean estanVaciosLosCampos(){
         return textFieldUsuario.getText().isEmpty() && passFieldContrasena.getPassword().toString().isEmpty();
     }
     
+    //Funcion para comprobar si es que el usuario va a poder pasar del inicio de sesion
     public void verificarInicioSesion(){
         if(estanVaciosLosCampos()) labelMensaje.setText("Favor de rellenar los campos que se piden");
         else{
