@@ -6,9 +6,9 @@ public class main extends javax.swing.JFrame {
     private Usuario usuarios[] = new Usuario[5];
     
     public main() {
+        initComponents();
         limpiar();
         iniciarUsuarios();
-        initComponents();
     }
     
     //Funcion para inicializar los usuarios dentro del arreglo
@@ -121,7 +121,9 @@ public class main extends javax.swing.JFrame {
         String contrasena = new String(textFieldContrasena.getPassword());
         
         if(comprobarUsuario(usuario, contrasena)){
-            
+            FrmMenu menu = new FrmMenu(usuario);
+            menu.setVisible(true);
+            this.setVisible(false);
             limpiar();
         }else labelMensaje.setText("El usuario y/o la contraseña ingresados estan incorrectos");
     }//GEN-LAST:event_btnInciarSesionActionPerformed

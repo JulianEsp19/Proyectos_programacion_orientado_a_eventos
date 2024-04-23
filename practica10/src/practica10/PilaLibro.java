@@ -8,7 +8,7 @@ public class PilaLibro {
         this.inicio = null;
     }
     
-    private boolean estaVacio(){
+    public boolean estaVacio(){
         return inicio == null;
     }
     
@@ -18,7 +18,7 @@ public class PilaLibro {
         if(estaVacio()) inicio = temporal;
         else{
             temporal.setSiguiente(inicio);
-            inicio = null;
+            inicio = temporal;
         }
     }
     
@@ -26,6 +26,23 @@ public class PilaLibro {
         if(!estaVacio()){
             inicio = inicio.getSiguiente();
         }
+    }
+    
+    @Override
+    public String toString(){
+        String resultado = "";
+        Libro temporal = inicio;
+        
+        while (temporal != null) {
+            resultado += "ISBN: " + temporal.getIsbn()+ "\n"+
+                    "Titulo: " + temporal.getTitulo()+ "\n"+
+                    "Autor: " + temporal.getAutor()+ "\n" +
+                    "Edicion: " + temporal.getEdicion()+ "\n\n" +
+                    "------------------------------------------" + "\n\n";
+            temporal = temporal.getSiguiente();
+        }
+        
+        return resultado;
     }
     
 }

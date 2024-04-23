@@ -7,7 +7,7 @@ public class PilaPrestamo {
         this.inicio = null;
     }
     
-    private boolean estaVacio(){
+    public boolean estaVacio(){
         return inicio == null;
     }
     
@@ -17,7 +17,7 @@ public class PilaPrestamo {
         if(estaVacio()) inicio = temporal;
         else{
             temporal.setSiguiente(inicio);
-            inicio = null;
+            inicio = temporal;
         }
     }
     
@@ -25,6 +25,22 @@ public class PilaPrestamo {
         if(!estaVacio()){
             inicio = inicio.getSiguiente();
         }
+    }
+    
+    public String toString(){
+        String resultado = "";
+        Prestamo temporal = inicio;
+        
+        while (temporal != null) {
+            resultado += "ID prestamo: " + temporal.getIdPrestamo()+ "\n"+
+                    "Fecha prestamo: " + temporal.getFechaPrestamo()+ "\n"+
+                    "Fecha devolucion: " + temporal.getFechaDevolucion()+ "\n" +
+                    "ID alumno: " + temporal.getIdAlumno()+ "\n\n" +
+                    "------------------------------------------" + "\n\n";
+            temporal = temporal.getSiguiente();
+        }
+        
+        return resultado;
     }
     
 }

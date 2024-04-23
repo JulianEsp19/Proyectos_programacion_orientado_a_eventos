@@ -7,7 +7,7 @@ public class PilaAlumno {
         this.inicio = null;
     }
     
-    private boolean estaVacio(){
+    public boolean estaVacio(){
         return inicio == null;
     }
     
@@ -17,7 +17,7 @@ public class PilaAlumno {
         if(estaVacio()) inicio = temporal;
         else{
             temporal.setSiguiente(inicio);
-            inicio = null;
+            inicio = temporal;
         }
     }
     
@@ -25,6 +25,23 @@ public class PilaAlumno {
         if(!estaVacio()){
             inicio = inicio.getSiguiente();
         }
+    }
+    
+    @Override
+    public String toString(){
+        String resultado = "";
+        Alumno temporal = inicio;
+        
+        while (temporal != null) {
+            resultado += "Id alumno: " + temporal.getIdAlumno() + "\n"+
+                    "Nombre: " + temporal.getNombre() + "\n"+
+                    "Curso: " + temporal.getCurso() + "\n" +
+                    "Email: " + temporal.getEmail() + "\n\n" +
+                    "------------------------------------------" + "\n\n";
+            temporal = temporal.getSiguiente();
+        }
+        
+        return resultado;
     }
     
 }
