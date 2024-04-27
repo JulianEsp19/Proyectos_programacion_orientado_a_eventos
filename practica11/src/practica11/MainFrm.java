@@ -131,7 +131,7 @@ public class MainFrm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        //variables para el metodo
+            //variables para el metodo
         int valor;
         
         /*
