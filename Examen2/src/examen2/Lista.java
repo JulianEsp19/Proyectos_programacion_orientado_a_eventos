@@ -19,7 +19,7 @@ public class Lista {
             String nombreProducto, fechaUltimoPedido;
             float precioUnitario;
         try{
-            codigoProducto = Integer.parseInt(JOptionPane.showInputDialog(parentComponent, "Ingrese el codigo de producto"));
+            codigoProducto = Integer.parseInt(JOptionPane.showInputDialog(parentComponent, "Ingrese el codigo de producto \n Los codigos son enteros y de 5 digitos"));
             nombreProducto = JOptionPane.showInputDialog(parentComponent, "Ingrese el nombre del producto");
             cantidadDisponible = Integer.parseInt(JOptionPane.showInputDialog(parentComponent, "Ingrese la cantidad disponible"));
             precioUnitario = Float.parseFloat(JOptionPane.showInputDialog(parentComponent, "Ingrese el precion unitario del producto"));

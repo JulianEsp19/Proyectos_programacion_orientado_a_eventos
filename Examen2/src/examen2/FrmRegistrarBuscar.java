@@ -111,7 +111,7 @@ public class FrmRegistrarBuscar extends javax.swing.JFrame {
         // TODO add your handling code here:
         char caracter = evt.getKeyChar();
         
-        if(textFieldCodigoProducto.getText().length() == 10) evt.consume();
+        if(textFieldCodigoProducto.getText().length() == 5) evt.consume();
         else if(Character.isAlphabetic(caracter)) evt.consume();
     }//GEN-LAST:event_textFieldCodigoProductoKeyTyped
 
