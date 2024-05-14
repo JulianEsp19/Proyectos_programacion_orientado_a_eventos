@@ -1,0 +1,8 @@
+# Nombre practica: Programacion orientada a eventos
+**Instrucciones**: Implementar en Java empleando el paradigma orientado a objetos, los siguientes incisos que ponen en práctica el manejo de clases (abstracción, encapsulamiento), así como la herencia. Por cada uno de los incisos desarrolla el proyecto correspondiente. Un archivo por main y otro por clase(s). Debe desarrollarse en lenguaje Java, utilizando el IDE Netbeans (preferente) o cualquier otro.
+
+- a) Implementar la clase **Evento** (diapositiva 32), donde contemple declarar atributos y métodos (set/get/constructor). Además de utilizar estructuras selectivas y repetitivas para realizar las acciones de Registrar, Editar (el usuario elige el campo a modificar), Imprimir. 
+
+- b) Implementar la **herencia** entre clases _Transporte y Tren_. Para cada una se debe declarar atributos y métodos (set/get/constructor).  De cada clase (Padre e hija) determine al menos tres atributos de distinto tipo de dato.  Además de utilizar estructuras selectivas y repetitivas para realizar las acciones de Registrar, Editar (el usuario elige el campo a modificar), Imprimir.
+
+- c) Realice el __modelado de una herencia__, considerando algo abstracto o un proceso.  Debe tener al menos cuatro atributos por clase (padrea e hija), así como métodos: set/get/constructor. Además de implementar la  herencia, debe utilizar estructuras selectivas y repetitivas para realizar las acciones de Registrar, Editar (el usuario elige el campo a modificar), Imprimir.
