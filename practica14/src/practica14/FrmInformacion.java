@@ -15,6 +15,10 @@ public class FrmInformacion extends javax.swing.JFrame {
         this.alumnos = alumnos;
         this.menu = menu;
         modelo = (DefaultTableModel) tablaDatos.getModel();
+        tablaDatos.getColumn("1").setHeaderValue("ID Alumno");
+        tablaDatos.getColumn("2").setHeaderValue("Nombre");
+        tablaDatos.getColumn("3").setHeaderValue("Curso");
+        tablaDatos.getColumn("4").setHeaderValue("E-mail");
         iniciarInformacionAlumnos();
     }
     
@@ -23,6 +27,10 @@ public class FrmInformacion extends javax.swing.JFrame {
         this.libros = libros;
         this.menu = menu;
         modelo = (DefaultTableModel) tablaDatos.getModel();
+        tablaDatos.getColumn("1").setHeaderValue("ISBN");
+        tablaDatos.getColumn("2").setHeaderValue("Titulo");
+        tablaDatos.getColumn("3").setHeaderValue("Autor");
+        tablaDatos.getColumn("4").setHeaderValue("Edicion");
         iniciarInformacionLibros();
     }
     
@@ -31,6 +39,10 @@ public class FrmInformacion extends javax.swing.JFrame {
         this.prestamos = prestamos;
         this.menu = menu;
         modelo = (DefaultTableModel) tablaDatos.getModel();
+        tablaDatos.getColumn("1").setHeaderValue("ID prestamo");
+        tablaDatos.getColumn("2").setHeaderValue("Fecha prestamo");
+        tablaDatos.getColumn("3").setHeaderValue("Fecha devolucion");
+        tablaDatos.getColumn("4").setHeaderValue("ID Alumno");
         iniciarInformacionPrestamos();
     }
     
@@ -99,7 +111,7 @@ public class FrmInformacion extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "1", "2", "3", "4"
             }
         ));
         jScrollPane2.setViewportView(tablaDatos);
